@@ -27,6 +27,7 @@ dconf write /org/gnome/shell/extensions/dash-to-dock/custom-theme-shrink true
 dconf write /org/gnome/shell/extensions/dash-to-dock/click-action "'minimize'"
 dconf write /org/gnome/shell/extensions/dash-to-dock/dock-fixed true
 dconf write /org/gnome/shell/extensions/dash-to-dock/dash-max-icon-size 36
+dconf write /org/gnome/shell/extensions/dash-to-dock/hot-keys false
 gext install arcmenu@arcmenu.com
 echo "2.3 - Applying ArcMenu settings"
 gext install user-theme@gnome-shell-extensions.gcampax.github.com
