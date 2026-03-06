@@ -2,7 +2,7 @@
 
 echo "PRE - installing yay."
 echo "Please accept all the next incoming queries."
-sudo pacman -S --needed base-devel git wget -y
+sudo pacman -S --needed base-devel git wget --noconfirm
 cd ~
 mkdir ".fedintosh"
 cd ".fedintosh"
@@ -14,7 +14,7 @@ echo "yay installed. Proceeding with next step..."
 
 
 echo "1 - Installing GEXT and git."
-sudo pacman -S python-pip -y
+sudo pacman -S python-pip --noconfirm
 pip install gnome-extensions-cli --break-system-packages
 echo "Temporarily modifying PATH..."
 export PATH="$HOME/.local/bin:$PATH"
@@ -65,7 +65,7 @@ dconf write /org/gnome/desktop/background/picture-uri "'file:///usr/share/backgr
 dconf write /org/gnome/desktop/background/picture-uri-dark "'file:///usr/share/backgrounds/gnome/glass-chip-d.jxl'"
 
 echo "3 - Compiling a custom version of gnome-shell"
-sudo pacman -S --needed base-devel git meson ninja python-pip gtk-doc gnome-common sassc gjs glib2
+sudo pacman -S --needed base-devel git meson ninja python-pip gtk-doc gnome-common sassc gjs glib2 --noconfirm
 cd ~/.fedintosh
 mkdir "customshell"
 cd customshell
@@ -79,7 +79,7 @@ cd customshell
 #patch -p1 < Shell_BlurEffect__rounded_corners_mask.patch
 #cd ~/.fedintosh/customshell/gnome-shell
 #makepkg -f -si
-yay -S gnome-rounded-blur
+yay -S gnome-rounded-blur --noconfirm
 cd ~/.fedintosh/customshell
 git clone https://github.com/aunetx/blur-my-shell
 cd blur-my-shell
